@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4tns_!giwl1(fdok1$lgd8hq0ga(ia+8+4!s_klind&p87o&p(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'mainapp.urls'
+ROOT_URLCONF = 'Mainapp.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mainapp.wsgi.application'
+WSGI_APPLICATION = 'Mainapp.wsgi.application'
 
 
 # Database
@@ -82,9 +83,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    } 
     
 }
+
+
 
 
 # Password validation
