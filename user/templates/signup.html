@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+  <style>
+    .card {
+      border: 2px solid #5cd3c3; /* Set the border color and width */
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px #7ccea7; /* Add the glow effect */
+    }
+    .gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(37, 177, 215, 0.5), rgba(143, 211, 244, 0.5));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(14, 130, 208, 0.5), rgba(143, 211, 244, 0.5))
+    }
+    .gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #216586;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(113, 223, 239), rgba(143, 211, 244, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(55, 197, 236), rgba(143, 211, 244, 1))
+    }
+    
+    </style>
+</head>
+
+<body>
+  <section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3" id="mid">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                <form action="{% url 'signup' %}" method="post">
+                  {% csrf_token %}
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example1cg" name="username" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example1cg">Your Name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form3Example3cg" name="email" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form3Example4cg" name="password1" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example4cg">Password</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form3Example4cdg" name="password2"
+                      class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                    <label class="form-check-label" for="form2Example3g">
+                      I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                    </label>
+                  </div>
+
+                  <div class="d-flex justify-content-center">
+                    <button type="submit"
+                      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                  </div>
+
+                  <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login/"
+                      class="fw-bold text-body"><u>Login here</u></a></p>
+
+                </form>
+                {% if messages %}
+                {% for message in messages %}
+                <div id="register-success-message" style="display:none;">{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Get the success message div and display it in a popup
+    var registerSuccessMessage = document.getElementById('register-success-message').innerHTML;
+    if (registerSuccessMessage) {
+      alert(registerSuccessMessage);
+    }
+  </script>
+
+</body>
+
+</html>

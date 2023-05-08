@@ -1,0 +1,14 @@
+
+.buttons{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    background-color:#fff;
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 55%;
+}

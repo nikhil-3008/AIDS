@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AIDS</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Free HTML Templates" name="keywords" />
+  <meta content="Free HTML Templates" name="description" />
+
+  <!-- Favicon -->
+  <link href="/static/img/favicon.ico" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Flaticon Font -->
+  <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <link rel="icon" href="aids.ico">
+  <style>
+    /* Style for the popup window */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      display: none;
+    }
+
+    #content {
+      border: 2px solid rgb(86, 244, 247);
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Blog Start -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Study Materials</span>
+        </p>
+        <h1 class="mb-4">Updated Study Materials</h1>
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4 mb-4">
+          <div class="card shadow-sm mb-2" id="content">
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Physics</h4>
+              <p>
+                "Notes at your fingertips"
+              </p>
+              <button onclick="displayPopup('popup2')">Button</button>
+
+              <div id="popup2" class="popup">
+                <h1>Physics</h1>
+                <a href="/static/notes/physis.pdf" target="_blank" class="viewPdfButton"><span style="color: crimson; font-size: x-large;" >Physics</span></a>
+                <p>"You will get all Pyhsics 
+                     notes in this book"</p>
+                <button onclick="hidePopup('popup2')">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card shadow-sm mb-2" id="content">
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Probability and Statists</h4>
+              <p>
+                "Notes at your fingertips"
+              </p>
+              <button onclick="displayPopup('popup3')">Button </button>
+
+              <div id="popup3" class="popup">
+                <h2>Probability and Statists</h2>
+              
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Sr.np</th>
+                      <th scope="col">Unit</th>
+                      <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Unit 1</td>
+                      <td ><a href="/static/notes/Probability_unit1.pdf" target="_blank" class="viewPdfButton">Unit1</a></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Unit 2</td>
+                      <td ><a href="/static/notes/Probability_unit1.pdf" target="_blank" class="viewPdfButton">Unit2</a></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Unit 3</td>
+                      <td ><a href="/static/notes/Probability_unit1.pdf" target="_blank" class="viewPdfButton">Unit3</a></td>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Unit 4</td>
+                      <td ><a href="/static/notes/Probability_unit1.pdf" target="_blank" class="viewPdfButton">Unit4</a></td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Unit 5</td>
+                      <td ><a href="/static/notes/Probability_unit1.pdf" target="_blank" class="viewPdfButton">Unit5</a></td>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Unit 6</td>
+                      <td ><a href="/static/notes/Probability_unit1.pdf" target="_blank" class="viewPdfButton">Unit6</a></td>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button onclick="hidePopup('popup3')">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card shadow-sm mb-2" id="content">
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Chemistry</h4>
+              <p>
+                "Notes at your fingertips"
+              </p>
+              <button onclick="displayPopup('popup4')">Button </button>
+
+              <div id="popup4" class="popup">
+                <h2>Chemistry</h2>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Sr.np</th>
+                      <th scope="col">Unit</th>
+                      <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Unit 1</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1WPCLuz1IE-SqABgilkahEkXlqctOxQcw-LayD0KEA7U/edit?usp=sharing">unit
+                          1</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Unit 2</td>
+                      <td><a href="#">unit 2</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Unit 3</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/11c13jAaQFYTzd9be9wtgK_eDs76JbHFez2kgrf9LVlA/edit?usp=sharing">unit
+                          3</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Unit 4</td>
+                      <td><a href="#">unit 4</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Unit 5</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/1WAD6rYgW_YzGv2tMarAt7A51Cj3uq1WrRrkPqq7kUhA/edit?usp=sharing">unit
+                          5</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Unit 6</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/1dPQbJJhXVlIYGF9x_jDOFSoEXYAdNOnp0D9CF_foLLo/edit?usp=sharing">unit
+                          6</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button onclick="hidePopup('popup4')">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card shadow-sm mb-2" id="content">
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Software Engineering</h4>
+              <p>
+                "Notes at your fingertips"
+              </p>
+              <button onclick="displayPopup('popup5')">Button </button>
+
+              <div id="popup5" class="popup">
+                <h2>Software Engineering</h2>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Sr.np</th>
+                      <th scope="col">Unit</th>
+                      <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Unit 1</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1WPCLuz1IE-SqABgilkahEkXlqctOxQcw-LayD0KEA7U/edit?usp=sharing">unit
+                          1</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Unit 2</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/13Emv9duLntS5tBVbTWYjwPjggwB12B8eyf9l_HKuJes/edit?usp=sharing">unit
+                          2</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Unit 3</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/14PwE4NOrxqFbe9pN9ouQJRBY3Q3w7ot4v8K4oGIpabE/edit?usp=sharing">unit
+                          3</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Unit 4</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/1-x-g04maqTOgudMx9kAM3wQUXBAkFrpGAZXb0NiTFOg/edit?usp=sharing">unit
+                          4</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Unit 5</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/1PIwHbanjjh9uCkPWJN72GetgyyKSd2YdMZX1NvlBtVs/edit?usp=sharing">unit
+                          5</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Unit 6</td>
+                      <td><a
+                          href="https://docs.google.com/document/d/1lYz5hHsvSInNEFoUfXvLUMOUJd2I6rH9tzs3EovStfE/edit?usp=sharing">unit
+                          6</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button onclick="hidePopup('popup5')">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card shadow-sm mb-2" id="content">
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Operating System</h4>
+              <p>
+                "Notes at your fingertips"
+              </p>
+              <button onclick="displayPopup('popup6')">Button </button>
+
+              <div id="popup6" class="popup">
+                <h2>Operating System</h2>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Sr.no</th>
+                      <th scope="col">Unit</th>
+                      <th scope="col">Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Unit 1</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1eHp5b2HaQCprfahhT9j5DTxF8EE0hG98WZMziplYSL4/edit?usp=sharing">unit
+                          1</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Unit 2</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1eCSEEIo2Kz_p0-hNj5qvRbsywjF2vUTcmsBQTwBZVSM/edit?usp=sharing">unit
+                          2</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Unit 3</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1I8lfooy_cXvR_He7gZLm1jlZRK2IncZBJ20xAWhtnGQ/edit?usp=sharing">unit
+                          3</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Unit 4</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1rWWAcvKWnWs2tma14GCuGvnSaE8fbnVlYCVRAvf8D5M/edit?usp=sharing">unit
+                          4</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Unit 5</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1NBEGowEn4R4fFDQhm1K30s4-7Tf5pHGzr9LPbmkViyU/edit?usp=sharing">unit
+                          5</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Unit 6</td>
+                      <td><a
+                          href="https://docs.google.com/presentation/d/1ZY6bszj8ZEsU-_E5VcyPnqZnY5oZy6F81HQWNCD6zX4/edit?usp=sharing">unit
+                          6</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button onclick="hidePopup('popup6')">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <button id="myButton">Click me</button>
+
+              <div id="myPopup" class="popup">
+                <div class="popup-content">
+                  <button id="closeButton" class="close">&times;</button>
+                  <h2>Hello, this is a pop-up window!</h2>
+                  <p>Click the close button to close the pop-up window.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <button id="myButton">Click me</button>
+
+              <div id="myPopup" class="popup">
+                <div class="popup-content">
+                  <button id="closeButton" class="close">&times;</button>
+                  <h2>Hello, this is a pop-up window!</h2>
+                  <p>Click the close button to close the pop-up window.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <button id="myButton">Click me</button>
+
+              <div id="myPopup" class="popup">
+                <div class="popup-content">
+                  <button id="closeButton" class="close">&times;</button>
+                  <h2>Hello, this is a pop-up window!</h2>
+                  <p>Click the close button to close the pop-up window.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border-0 shadow-sm mb-2">
+            <img class="card-img-top mb-2" src="img/blog-1.jpg" alt="" />
+            <div class="card-body  text-center p-4">
+
+              <h4 class="">Diam amet eos at no eos</h4>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
+                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+              </div>
+              <p>
+                Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam
+                eirmod, duo et sed sit eirmod kasd clita tempor dolor stet
+                lorem. Tempor ipsum justo amet stet...
+              </p>
+              <button id="myButton">Click me</button>
+
+              <div id="myPopup" class="popup">
+                <div class="popup-content">
+                  <button id="closeButton" class="close">&times;</button>
+                  <h2>Hello, this is a pop-up window!</h2>
+                  <p>Click the close button to close the pop-up window.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <h2>"Thank you for using our website and downloading the notes. We hope you find them helpful in your studies.
+         If you need more notes or have any questions, please feel free to contact us "contactaids1@gmail.com". Our team is always happy to help you in any way we can."</h2>
+    </div>
+  </div>
+
+  <!-- Blog End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-2">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+          style="font-size: 40px; line-height: 40px">
+
+          <i class="fa fa-buysellads" style="font-size:50px; padding:3%;"></i>
+          <span class="text-white">AIDS</span>
+        </a>
+        <p style="font-size: 25px;">AI based Digital Study</p>
+
+      </div>
+      <div class="d-flex justify-content-start mt-4 text-center">
+        <a class=" btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 40px; height: 40px" href="#"><i class="fab fa-twitter" style="height:50px;"></i></a>
+        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 38px; height: 38px" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 38px; height: 38px" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 38px; height: 38px" href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+
+    </div>
+    <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
+      <p class="m-0 text-center text-white">
+        &copy;
+        <a class="text-primary font-weight-bold" href="#">AIDS 2023</a>.
+        All Rights Reserved.
+
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+
+      </p>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+
+  <script>
+    // Function to display the popup window
+    var content = document.getElementById('content')
+    function displayPopup(id) {
+      // Hide all other popups
+      hideAllPopups();
+      hideAllContent();
+      // Show the specified popup
+      document.getElementById(id).style.display = "block";
+
+    }
+
+    // Function to hide the popup window
+    function hidePopup(id) {
+      // Hide the specified popup
+      document.getElementById(id).style.display = "none";
+      content.style.display = "block";
+    }
+
+    // Function to hide all popup windows
+    function hideAllPopups() {
+      var popups = document.getElementsByClassName("popup");
+      for (var i = 0; i < popups.length; i++) {
+        popups[i].style.display = "none";
+      }
+    }
+    function hideAllContent() {
+      var content = document.getElementsByClassName("content");
+      for (var i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+      }
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/lib/easing/easing.min.js"></script>
+  <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+  <script src="/static/mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="/static/js/main.js"></script>
+  <script>
+    const buttons = document.querySelectorAll('.viewPdfButton');
+    buttons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const pdfUrl = this.getAttribute('href') || this.getAttribute('data-pdf');
+        const pdfWindow = window.open("/pdfviewer", "_blank");
+        pdfWindow.onload = function() {
+          pdfWindow.document.getElementById("pdfViewer").innerHTML = '<iframe src="' + pdfUrl + '" height="750px" width="100%"></iframe>';
+        };
+      });
+    });
+  </script>
+</body>
+
+</html>

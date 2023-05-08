@@ -1,0 +1,535 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AIDS</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Free HTML Templates" name="keywords" />
+  <meta content="Free HTML Templates" name="description" />
+
+  <!-- Favicon -->
+  <link href="/static/img/favicon.ico" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Flaticon Font -->
+  <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <link rel="icon" href="aids.ico">
+  <style>
+    body {
+      margin: 0;
+
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 40px">
+        <i class="fa fa-buysellads" style="font-size:50px; padding:3%;"></i>
+        <!-- <i class="flaticon-043-teddy-bear"></i> -->
+        <span class="text-primary">AIDS</span>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav font-weight-bold mx-auto py-0">
+          <a href="/" class="nav-item nav-link active">Home</a>
+          <a href="/about" class="nav-item nav-link">About</a>
+          <a href="/papers" class="nav-item nav-link">Papers</a>
+          <a href="#Reviews" class="nav-item nav-link">Reviews</a>
+        </div>
+        <div class="d-flex align-items-center">
+          {% if user.is_authenticated %}
+          <div class="dropdown">
+            <button class="rounded-circle border-0" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="{% static 'img/testimonial-2.jpg' %}" class="rounded-circle" height="35" alt="White Portrait of a Man"
+                loading="eager" style="background-color: aliceblue;" />
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item text-danger" href="/logout">logout</a>
+            </div>
+            <p>Welcome, {{ username }}!</p> 
+          </div>
+        
+          {% else %}
+          <a href="/signup" class="btn btn-primary px-4">Register</a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+
+  <!--  Start -->
+  <div class="container-fluid px-1 px-md-5 mb-5" style="background-color: #088395; overflow-x: hidden;">
+    <div class="row align-items-center px-3">
+      <div class="col-lg-6 text-center text-lg-left">
+        <h1 class="display-3 font-weight-bold text-white">
+          Welcome to AIDS Portal
+        </h1>
+        <p class="text-white mb-4">
+        <h3 class="text-white">One Destination for Complete exam Preparation</h3>
+
+        </p>
+        <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+      </div>
+      <div class="col-lg-6 text-center text-lg-right">
+        <img class="img-fluid mt-5" src="/static/img/header.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <!--  End -->
+
+  <!-- About Start -->
+  <div class="container-fluid pt-5">
+    <div class="container text-center">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">About Us</span>
+        </p>
+        <h1 class="mb-4">AIDS Portal</h1>
+      </div>
+      <div class="row" style="font-size:larger;">
+        <p>We are pleased to inform you that we will be providing past year papers and study material on our platform.
+          We believe that this will be a valuable resource for students and educators who are seeking to access quality
+          educational materials.
+        </p>
+        <p>Our platform will offer a user-friendly interface that allows users to easily search and access the material
+          they need.
+          We would like to invite you to connect with us on our app to stay updated on our latest developments. We
+          believe that our
+          platform will be of great value to your users, and we would be happy to work with you to promote it to your
+          users.
+        </p>
+      </div>
+      <a href="/about" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+    </div>
+  </div>
+  <!-- About End -->
+
+  <!-- Facilities Start -->
+  <div class="container-fluid pt-5">
+    <div class="container pb-3">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
+            style="padding: 30px; border: 2px solid  #37dfee;">
+            <i class='fas fa-book-reader' style='font-size:48px;color:rgb(4, 3, 3)'></i>
+
+            <div class="pl-4">
+              <a href="/papers">
+                <h4>Previous year papers</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
+            style="padding: 30px ; border: 2px solid  #37dfee;">
+            <i class='fas fa-book-open' style='font-size:48px;color:rgb(8, 8, 8)'></i>
+
+            <div class="pl-4">
+              <a href="study_material/">
+                <h4>Study materials</h4>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
+            style="padding: 30px ; border: 2px solid  #37dfee;">
+            <i class="flaticon-030-crayons h2 font-weight-normal text-dark mb-sm-2" style="color:rgb(8, 8, 8);"></i>
+            <div class="pl-4">
+              <a href="/static/AIDS ( G Series).pdf" target="_blank" class="viewPdfButton">
+                <h4>Library Books</h4>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Facilities Start -->
+
+  <!-- Class Start -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Learn a skill</span>
+        </p>
+        <h1 class="mb-4">Skill paths help you fully master a data topic</h1>
+      </div>
+      <div class="card-deck">
+        <div class="card" style="border: 2px solid; border-color: rgb(38, 219, 219);">
+          <img style="height: 200px; width: 200px;" class="card-img-top" src="/static/roadmap/database.gif"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Blockchain</h5>
+            <p class="card-text">
+              Blockchain is decentralized, distributed digital ledger that records transactions across many computers.
+              Each transaction is verified by multiple parties on the network and added to the ledger as a block.
+            </p>
+            <a href="/static/roadmap/blockchain.pdf" target="_blank" class="viewPdfButton">
+              <h4 style="color: brown;">RoadMap</h4>
+            </a>
+          </div>
+        </div>
+        <div class="card" style="border: 2px solid; border-color: rgb(38, 219, 219);">
+          <img style="height: 200px; width: 200px;" class="card-img-top" src="/static/roadmap/match.gif"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Flutter</h5>
+            <p class="card-text"> Flutter is an open-source mobile application development framework created by Google.
+              It allows developers to build high-performance, native mobile apps ..</p>
+            <a href="/static/roadmap/flutter.pdf" target="_blank" class="viewPdfButton">
+              <h4 style="color: brown;">RoadMap</h4>
+            </a>
+          </div>
+        </div>
+        <div class="card" style="border: 2px solid; border-color: rgb(38, 219, 219);">
+          <img style="height: 200px; width: 200px;" class="card-img-top" src="/static/roadmap/server.gif"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Backend developer</h5>
+            <p class="card-text"> A backend developer is responsible for developing and maintaining the server-side of a
+              web application or software.
+              They work with languages such as Python ,PHP, and use frameworks such as Django, Spring,
+              or Laravel to create APIs.</p>
+            <a href="/static/roadmap/backendDeveloper.pdf" target="_blank" class="viewPdfButton">
+              <h4 style="color: brown;">RoadMap</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Class End -->
+
+  <!-- Topper list Start -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Our Toppers</span>
+        </p>
+        <h1 class="mb-4">Meet Our Toppers</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="/static/img/priya.jpg" alt="" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px"
+                href="https://www.linkedin.com/in/priya-kriplani-659aa8220"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Priya Kriplani</h4>
+          <i>9.95</i>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="/static/img/gargi.jpg" alt="" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px"
+                href="https://www.linkedin.com/in/gargi-magarde-38a28625b"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Gargi magarde</h4>
+          <i>9.41</i>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="/static/img/durvesh.jpg" alt="" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px"
+                href="https://www.linkedin.com/in/durvesh-wath-1aa8a9257 "><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Durvesh Wath</h4>
+          <i>9.28</i>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center team mb-5">
+          <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
+            <img class="img-fluid w-100" src="/static/img/valhari.jpg" alt="" />
+            <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px"
+                href="https://www.linkedin.com/in/valhari-meshram"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h4>Valhari Meshram</h4>
+          <i>9.09</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Team End -->
+
+  <!--  Reviews -->
+  <div class="container-fluid py-5" id="Reviews">
+    <div class="container p-0">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Reviews</span>
+        </p>
+        <h1 class="mb-4">What Ycceian Say!</h1>
+      </div>
+      <div class="owl-carousel testimonial-carousel">
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            "I recently came across this website that offers past years papers and found it extremely
+            useful for my exam preparations
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="/static/img/gunjan.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Gunjan Bagaitkar</h5>
+              <i>2nd year</i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            The website has a user-friendly interface ,papers are well-organized by year and subject, making it easy to
+            find what I need.
+            I appreciate the effort put into compiling all the papers in one place
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="/static/img/tanmay.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Tanmay singewar</h5>
+              <i>2 year</i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            The website is easy to navigate and the papers are arranged in a chronological order,
+            I also appreciate the variety of subjects and years available on the website
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="/static/img/shivam.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Shivam Durbule</h5>
+              <i>2nd year</i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item px-3">
+          <div class="bg-light shadow-sm rounded mb-4 p-4">
+            <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+            The papers are of great quality and helped me prepare for my exams.
+            I would definitely recommend this website to anyone who is looking for past papers."
+          </div>
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="/static/img/prajwal.jpg" style="width: 70px; height: 70px" alt="Image" />
+            <div class="pl-3">
+              <h5>Prajwal potfode</h5>
+              <i>2nd year</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
+
+  <!-- Blog Start -->
+  <div class="container-fluid pt-5">
+    <div class="container">
+      <div class="text-center pb-2">
+        <p class="section-title px-5">
+          <span class="px-2">Latest Blog</span>
+        </p>
+        <h1 class="mb-4"> Great blogs on data science</h1>
+      </div>
+      <div class="row pb-3">
+        <div class="col-lg-4 mb-4">
+          <div class="card border border-secondary shadow-sm mb-2">
+            <div class="card-body bg-light text-center p-4">
+              <h4 class="">Towards Data Science</h4>
+              <p>
+                This blog is a popular platform for data science enthusiasts and practitioners.
+                It provides a wide range of articles,blogs on topics related to data science,
+                machine learning, and AI.
+              </p>
+              <a href="https://towardsdatascience.com/" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border border-secondary shadow-sm mb-2">
+            <div class="card-body bg-light text-center p-4">
+              <h4 class=""> KDnuggets</h4>
+              <p>
+                KDnuggets is a leading website in the field of data science, machine learning, and artificial
+                intelligence.
+                It provides news, tutorials, and blogs on various topics related to data science.
+              </p>
+              <a href="https://www.kdnuggets.com/tag/data-science" class="btn btn-primary px-4 mx-auto my-2">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card border border-secondary shadow-sm mb-2">
+            <div class="card-body bg-light text-center p-4">
+              <h4 class=""> Analytics Vidhya</h4>
+              <p>
+                Analytics Vidhya is a community-driven platform for data science professionals.
+                Its blog section provides articles, tutorials, and resources on various topics related to data science.
+              </p>
+              <a href="https://www.analyticsvidhya.com/" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog End -->
+
+  <!-- mobile development -->
+  <div class="container-fluid py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="section-title pr-5">
+            <span class="pr-2">Mobile Application</span>
+            </p>
+            <h2 class="mb-4">"Download our mobile application and access our services anytime, anywhere"</h2>
+            <p style="font-size: large;">
+            " We are excited to announce that we now have past year papers available for you to practice
+            on both our web and app platforms! These papers are a great way to prepare for your upcoming exams and get
+            a sense of the type of questions that may be asked. You can access these papers on our website or by
+            downloading our app.
+            We hope that you find these papers useful in your studies and wish you the best of luck in your exams!"
+            </p>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/img/undraw_Mobile_application_re_13u3.png" alt="My Image" class="img-fluid">
+        </div>
+      </div>
+    </div>    
+  </div>
+  <!-- mobile development -->
+
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-2">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+          style="font-size: 40px; line-height: 40px">
+
+          <i class="fa fa-buysellads" style="font-size:50px; padding:3%;"></i>
+          <span class="text-white">AIDS</span>
+        </a>
+        <p style="font-size: 25px;">AI based Digital Study</p>
+
+      </div>
+      <div class="d-flex justify-content-start mt-4" ">
+        <a
+          class=" btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+        style="width: 40px; height: 40px" href="#"><i class="fab fa-twitter" style="height:50px;"></i></a>
+        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 38px; height: 38px" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 38px; height: 38px" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0 text-white"
+          style="width: 38px; height: 38px" href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+
+    </div>
+    <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
+      <p class="m-0 text-center text-white">
+        &copy;
+        <a class="text-primary font-weight-bold" href="#">AIDS 2023</a>.
+        All Rights Reserved.
+
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+
+      </p>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/lib/easing/easing.min.js"></script>
+  <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+  <script src="/static/mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script>
+    const buttons = document.querySelectorAll('.viewPdfButton');
+    buttons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        const pdfUrl = this.getAttribute('href') || this.getAttribute('data-pdf');
+        const pdfWindow = window.open("/pdfviewer", "_blank");
+        pdfWindow.onload = function () {
+          pdfWindow.document.getElementById("pdfViewer").innerHTML = '<iframe src="' + pdfUrl + '" height="750px" width="100%"></iframe>';
+        };
+      });
+    });
+  </script>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>
